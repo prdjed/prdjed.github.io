@@ -10,8 +10,9 @@ const app = new Realm.App({ id:appId});
 //Get Tokens from the url 
 const params = new URLSearchParams(window.location.search);
 const token = params.get('token');
-const tokenId = params.get('tokenId');
-
+const tokenId = params.get('tokenId');   
+console.log(token);
+console.log(tokenId);
 //Confirm email
 app.emailPasswordAuth
     .confirmUser(token, tokenId)
